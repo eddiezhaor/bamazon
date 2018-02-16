@@ -51,11 +51,6 @@ function start() {
             case "Add New Product":
                 addNewItem();
                 break;
-
-
-
-
-
         }
     })
 }

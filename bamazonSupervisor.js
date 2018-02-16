@@ -14,7 +14,6 @@ connection.connect(function(err) {
     start()
 })
 
-
 function start() {
     inquirer.prompt([{
         name: "selection",
@@ -31,7 +30,6 @@ function start() {
                     if (err) throw err;
 
                     var data = JSON.parse(JSON.stringify(result));
-                    console.log(Object.keys(data).length);
                     var table = new Table({
                         head: Object.keys(data[0]),
 
@@ -53,16 +51,12 @@ function start() {
                             'middle': '│'
                         }
                     });
-
                     Object.keys(data).forEach(function(element) {
                         var data1 = Object.values(data[element])
                         table.push(
                             data1
                         );
-
                     })
-
-
                     console.log(table.toString());
                     process.exit();
                 })
@@ -83,7 +77,6 @@ function addDepartment() {
             name: "department",
             message: "Enter the department name that you want to add",
             type: "input",
-
         },
         {
             name: "cost",

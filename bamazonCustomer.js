@@ -20,7 +20,7 @@ function displayItems() {
         if (err) throw err;
         var data = JSON.parse(JSON.stringify(result));
         data.forEach(function(element) {
-            console.log("Item ID: " + element["item_id"] + " Name: " + element["product_name"] + " Pice: " + element["price"])
+            console.log("Item ID: " + element["item_id"] + " Name: " + element["product_name"] + " Price: " + element["price"])
         });
         userChoice()
     })
